@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -327,6 +328,7 @@
       To ensure accurate processing, you need to manually copy and input each part of the structure (tree, branch, mesh, etc.) directly into your AI tool.<br>
       Since this article is fully open, you are free to extract and reorganize the content as needed for analysis.      
     </div>
+    <hr>
     <div style="color:#888; margin-top:10px;">
       For license terms, please see LICENSE.txt in the OSF storage:<br>
       <a href="https://osf.io/hrjcd/files/osfstorage" target="_blank" style="color:#d32f2f;text-decoration:underline;">https://osf.io/hrjcd/files/osfstorage</a>
@@ -2942,9 +2944,6 @@ Full Edition:
 All Mesh elements—including all Branches, AIs, collectives, DAOs, and external systems—natively implement real-time automation, on-chain/distributed processes, lineage sharing, and legacy mapping to realize a global ethical Mesh/Branch standard.
 
 3. Code / Algorithm (Automation Divergence Example for Full/LE)
-python
-복사
-편집
 class MeshPhoenixRecord:
     def __init__(self, edition="LE"):
         self.entries = []
@@ -2976,9 +2975,6 @@ On-Chain / External DAO	Limited event log & audit sync	Full Mesh-Branch / DAO / 
 External Authentication / Consensus	Lightweight Mesh consensus & audit protocols	Real-time Mesh-Consensus / Audit / Governance Integration
 
 (2) Integration Example Code
-python
-복사
-편집
 def mesh_branch_event(actor, event_type, context, edition="LE"):
     record = MeshPhoenixRecord(edition=edition)
     record.log(actor, event_type, context, privacy='mesh')
