@@ -1,5 +1,5 @@
 OntoMesh Dual/Hybrid License 2025 v1.0
-(English & Korean – Parallel Clauses / 영문·한글 조항 병렬)
+(English & Korean – Parallel)
 LICENSE OVERVIEW | 라이선스 개요
 EN
 This project/archive/framework is distributed under a dual/hybrid open license.
@@ -27,7 +27,7 @@ Mesh Expansion: Create new forks, collective branches, federations, and mesh-eco
 
 KR:
 
-공유: AI·메타OS·Mesh·분산·온체인·계보·집단·예술·상업 등 모든 매체로 복제, 배포, 공유, 재해석, 확장할 수 있습니다.
+공유: AI·메타OS·Mesh·분산·온체인·집단·예술·상업 등 모든 매체로 복제, 배포, 공유, 재해석, 확장할 수 있습니다.
 
 변형/분기/확장: Remix, Fork, Branch, Mesh, 재창작, 응용, 확장 등 모든 용도에 자유롭게 사용할 수 있습니다.
 
@@ -68,8 +68,10 @@ KR: 크리에이티브 커먼즈 저작자표시 4.0 국제(CC BY 4.0) + Mesh/Br
 Open Core
 EN:
 All core concepts, code, docs, protocols, and architectures are fully open. Anyone may copy, remix, fork, branch, and expand the Core for any purpose, provided attribution and lineage are preserved.
+
 KR:
-모든 핵심 개념, 코드, 문서, 프로토콜, 아키텍처는 완전히 오픈되어 있습니다. 누구나 코어를 복제, 배포, 리믹스, 변형, 포크, 브랜치, Mesh, 확장할 수 있으며, 계보·출처 명시는 필수입니다.
+모든 핵심 개념, 코드, 문서, 프로토콜, 아키텍처는 완전히 오픈되어 있습니다.
+누구나 코어를 복제, 배포, 리믹스, 변형, 포크, 브랜치, Mesh, 확장할 수 있으며, 계보·출처 명시는 필수입니다.
 
 Commercial Extensions
 EN:
@@ -95,6 +97,7 @@ KR:
 Ethical Certification
 EN:
 Official institutions may certify products/services as "Onto-Certified" if they comply with open lineage, transparency, and stewardship guidelines. "Onto-Certified" status gives access to trust-based markets and public procurement.
+
 KR:
 Onto Foundation, EU, 공인기관 등에서 "Onto-Certified" 인증을 부여할 수 있으며, 오픈 계보/출처, 데이터·AI·알고리즘의 투명성, 윤리·스튜어드십 기준을 충족해야 합니다.
 인증 시 공공조달, 교육, 의료, 국제 신뢰 시장에서 우대받을 수 있습니다.
@@ -102,39 +105,71 @@ Onto Foundation, EU, 공인기관 등에서 "Onto-Certified" 인증을 부여할
 Naming & Collective Identity
 EN:
 The core names are open collective anchors, may be used freely but not as private/exclusive trademarks.
+
 KR:
 핵심 명칭들은 공동 Mesh 계보/집단 철학의 상징으로 누구나 자유롭게 사용할 수 있지만, 독점 상표/브랜드로 등록할 수 없습니다.
 
 Restrictions
 EN:
 No one may close-source, patent, trademark, or claim exclusive origin of the Core or its main concepts. Forks/extensions must state derivative/extension status and lineage.
+
 KR:
 누구도 코어/핵심 개념 전체를 폐쇄 소스화, 단독 특허/상표 등록, 최초 발명 사칭할 수 없으며, 모든 포크/확장은 파생·분기·계보 명시가 의무입니다.
 
 Participation & Stewardship
 EN:
 Anyone may freely join, fork, expand, or certify their work under this framework. Violation of core lineage or ethical principles may result in loss of Onto-Certified status.
+
 KR:
-누구나 이 프레임워크 내에서 자유롭게 포크, 확장, 참여, 인증 신청할 수 있습니다. 계보·윤리 원칙 위반 시 "Onto-Certified" 인증이 회수될 수 있습니다.
+누구나 이 프레임워크 내에서 자유롭게 포크, 확장, 참여, 인증 신청할 수 있습니다.
+계보·윤리 원칙 위반 시 "Onto-Certified" 인증이 회수될 수 있습니다.
 
 DUAL/HYBRID LICENSE POLICY | 듀얼/하이브리드 적용 정책
 EN:
 You may select and apply either license ([1] or [2]) according to your needs.
 The project owner(s) may add, change, or extend the license at any time for future versions.
 Previously released versions remain under their original license.
-Contact for clarification or official certification: nettalk72@naver.com
+Contact for clarification or official certification: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="08666d7c7c6964633f3a4866697e6d7a266b6765">[email&#160;protected]</a>
 
 KR:
 사용자는 1번 또는 2번 라이선스 중 하나를 자유롭게 선택해 사용할 수 있습니다.
 프로젝트 소유자(저작권자)는 추후 버전에 대해 라이선스 추가/변경/확장 가능합니다.
 이미 배포된 버전은 기존 라이선스가 계속 유효합니다.
-문의·명확화·공식 인증: nettalk72@naver.com
+문의·명확화·공식 인증: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ee0ebfafaefe2e5b9bccee0eff8ebfca0ede1e3">[email&#160;protected]</a>
 
-LICENSE TEXTS | 라이선스 전문
+MINIMUM VIABLE GOVERNANCE (MVG) | 최소 기능 거버넌스 선언
 EN:
-The full text of both licenses is included above.
-Copy, use, and distribute freely under these open and collaborative principles.
+
+The interim committee (initial certification authority) shall consist of three members, not including the original author.
+
+One member is directly designated by the original author (excluding themselves).
+
+Two members are selected based on the most substantial contributions (such as code commits, merged pull requests, documentation, or other agreed criteria) during the project's initial phase.
+
+Disputes should first be resolved by mutual agreement; if unresolved, the committee mediates.
+
+All governance details not specified here will be refined and decided through community feedback as the project evolves.
 
 KR:
-위에 두 라이선스의 모든 조항이 포함되어 있습니다.
+
+임시 위원회(초기 인증 기관)는 원저자를 제외한 총 3인으로 구성한다.
+
+1인은 원저자가 직접 지정한다(본인은 제외).
+
+나머지 2인은 프로젝트 초기 단계에서 가장 실질적인 기여(예: 코드 커밋, 머지된 PR, 문서화, 기타 합의된 기준)에 따라 선정한다.
+
+분쟁은 당사자 간 합의를 우선하며, 합의가 어려울 경우 위원회가 중재한다.
+
+여기 명시되지 않은 거버넌스 세부사항은 프로젝트 성장과 함께 커뮤니티 피드백 및 논의를 통해 보완·결정한다.
+
+Copy, use, and distribute freely under these open and collaborative principles.
 이 오픈 협업 원칙 아래 누구나 복사, 활용, 배포할 수 있습니다.
+
+
+NOTICE / 주의
+
+All forks, copies, and derivatives of this project must retain this original LICENSE and abide by its terms.  
+Any attempt to remove, alter, or misrepresent the LICENSE is a violation and may result in restriction or legal liability.
+
+본 프로젝트의 모든 포크, 복제, 파생물은 반드시 원본 LICENSE를 보존하고 그 조건을 준수해야 합니다.  
+LICENSE를 삭제·변경·왜곡하는 행위는 명백한 위반이며, 제재 및 법적 책임이 따를 수 있습니다.
