@@ -1,82 +1,105 @@
-# OntoMesh Project
+# OntoMotoOS.ai
 
-[English / 한국어]
+**Official Engine · API · SaaS for the OntoMesh/Branch Ecosystem**  
+**온토메시/브랜치 생태계 공식 엔진 · API · SaaS 플랫폼**
 
 ---
 
-## What is OntoMesh?  
-OntoMesh is an open, collaborative, mesh/branch knowledge & development framework for AI, science, and next-generation collective intelligence.  
-모두를 위한 AI, 과학, 차세대 집단지성을 위한 오픈·콜라보레이티브 Mesh/Branch 지식·개발 프레임워크입니다.
+## What is OntoMotoOS.ai?
+
+**OntoMotoOS.ai** is the official AI engine, API, and SaaS platform for the OntoMesh/Branch collective intelligence and mesh/branch governance ecosystem.
+
+OntoMotoOS.ai는 OntoMesh/Branch 집단지성 및 거버넌스 생태계를 위한 공식 AI 엔진, API, SaaS 플랫폼입니다.
+
+- **Mesh/Branch 기반 오픈 협업, AI, 연구, 예술, 상업 등 통합**
+- **Open, dual/hybrid licensing for all users, companies, and researchers**
+- **투명한 계보, 윤리 기준, 공동 Stewardship 지원**
 
 ---
 
 ## Key Features | 주요 특징
-- Mesh/Branch 기반 오픈 협업 및 분기 확장
-- AI, 연구, 예술, 상업 모두를 아우르는 듀얼/하이브리드 오픈 라이선스
-- 투명한 계보, 집단지성 거버넌스, 윤리적 확장 지원
+
+- Mesh/Branch-based knowledge OS & engine for AI, science, and collective intelligence  
+  AI, 과학, 집단지성의 미래형 메시/브랜치 지식 OS 및 엔진
+- Flexible for both open academic use and commercial extension  
+  오픈 연구 목적과 상업적 확장 모두 대응
+- Transparent governance and ethical standards  
+  투명한 거버넌스, 윤리 기준, 집단적 Stewardship
 
 ---
 
 ## License | 라이선스
 
-This project is released under the **OntoMesh Dual/Hybrid License 2025 v1.0**.  
-본 프로젝트는 **OntoMesh 듀얼/하이브리드 라이선스 2025 v1.0**으로 배포됩니다.
+**OntoMesh Dual/Hybrid License 2025 v1.0**
 
-**You may choose either: / 두 가지 중 하나를 자유롭게 선택해 사용할 수 있습니다:**
-1. **OntoOmnia ULTIMATE LICENSE** (Full Mesh/Branch Open License)
-2. **OntoMotoOS Hybrid License** (Open Core + Commercial/Certification-Ready)
+- Choose either:
+  1. **OntoOmnia ULTIMATE LICENSE** (Full Mesh/Branch Open License)
+  2. **OntoMotoOS Hybrid License** (Open Core + Commercial/Certification-Ready)
 
-> 자세한 라이선스 전문은 [`LICENSE`](./LICENSE) 및 본 README 하단을 참고하세요.
+> 라이선스 전문은 [`LICENSE`](./LICENSE) 파일 또는 아래 “Show LICENSE” 참고  
+> All forks, copies, and derivatives must retain and comply with the LICENSE.
 
 ---
 
-## Contribution Guide | 기여 안내
+## Community & Contribution | 커뮤니티 & 기여
 
-- **Fork, branch, and contribute freely!**  
-  누구나 자유롭게 포크, 브랜치, 기여 가능합니다.
-- Please respect and retain the original LICENSE in all forks, copies, and derivatives.  
-  모든 포크/복제/파생물은 반드시 원본 LICENSE를 준수하고 보존해야 합니다.
-- For major changes, please open an issue first to discuss what you would like to change.  
-  큰 변경 전에는 Issue를 먼저 등록해 주세요.
+- **Fork, branch, and contribute freely!**
+  누구나 자유롭게 포크, 브랜치, 기여 가능
+- Read: [README.md](./README.md), [LICENSE](./LICENSE), 그리고 Contribution Guide
+- For major changes, please open an Issue first  
+  큰 변경 전에는 Issue 등록 권장
+- Discussions, issues, governance feedback always welcome  
+  토론/이슈/피드백 환영!
 
 ---
 
 ## Minimum Viable Governance (MVG) | 최소 기능 거버넌스
 
-- The interim committee (initial certification authority) consists of 3 members (original author excluded):  
-  - 1 member directly designated by the original author (not themselves)  
-  - 2 members selected by substantial contributions (code, PR, docs, etc.)
-- Disputes: mutual agreement first; if unresolved, committee mediates.
-- Details not specified here will be determined by community feedback as the project evolves.
+- **Interim committee** (initial certification authority): 3 members (original author excluded)
+  - 1 member designated by the original author (not themselves)
+  - 2 members chosen by substantial contributions (code, PR, docs, etc.)
+- Disputes: try mutual agreement; if unresolved, committee mediates
+- Details not specified here will be determined by community feedback
 
-- 임시 위원회(초기 인증 기관)는 원저자 제외 3인으로 구성:  
-  - 1인은 원저자가 직접 지정(본인 제외)  
-  - 2인은 실질적 기여(코드, PR, 문서 등)로 선정
-- 분쟁은 당사자 합의 우선, 실패 시 위원회 중재
-- 여기 명시되지 않은 세부 운영은 커뮤니티 논의로 보완/결정
+- **임시 위원회:** 원저자 제외 3인 (1인은 지정, 2인은 실질 기여자)
+- 분쟁: 합의 우선, 실패 시 위원회 중재
+- 세부 운영은 커뮤니티 논의로 보완/결정
+
+---
+
+## Official Network | 공식 파트너
+
+- [OntoMotoOS.org](https://ontomotoos.org) — Open Governance & Community Hub  
+- [OntoKernel.org](https://ontokernel.org) — Core Engine & Kernel Library  
+- [OntoFormula.org](https://ontoformula.org) — Formula, Ethics & Philosophy Hub  
+- [dotnetone.com](https://dotnetone.com) — Global Expert Network  
+- [dotnetxpert.com](https://dotnetxpert.com) — Next-Gen Expert Certification & Mentoring  
 
 ---
 
 ## Notice | 주의
 
-**All forks, copies, and derivatives of this project must retain the original LICENSE and abide by its terms.  
+**All forks, copies, and derivatives must retain the original LICENSE and abide by its terms.  
 Any attempt to remove, alter, or misrepresent the LICENSE is a violation and may result in restriction or legal liability.**
 
-**본 프로젝트의 모든 포크, 복제, 파생물은 원본 LICENSE를 반드시 보존하며, 그 조건을 준수해야 합니다.  
+**모든 포크, 복제, 파생물은 원본 LICENSE를 반드시 보존하며, 그 조건을 준수해야 합니다.  
 LICENSE를 삭제·변경·왜곡하는 행위는 위반이며, 제재 및 법적 책임이 따를 수 있습니다.**
 
 ---
 
 ## Contact | 문의
 
-Questions, contributions, or official certification inquiries:  
+Questions, contributions, or official certification requests:  
 질문, 기여, 공식 인증 문의:  
-**nettalk72@naver.com**
+**nettalk72 [at] naver [dot] com**  
+(Please use English or Korean)
 
 ---
 
 ### License Details | 라이선스 전문
-> 전문은 `LICENSE` 파일 혹은 [여기](./LICENSE)를 참고하십시오.
+
+> 전문은 [`LICENSE`](./LICENSE) 파일 또는 웹사이트에서 확인하실 수 있습니다.
 
 ---
 
+&copy; 2025 OntoMotoOS.ai · Official AI Engine for OntoMesh/Branch Ecosystem
