@@ -3,10 +3,22 @@
   <!-- Main page -->
   <url>
     <loc>https://ontomotoos.ai/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://ontomotoos.ai/ontomotoos-v2-feature-table.html</loc>
+    <lastmod>2025-08-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ontomotoos.ai/ontomotoos-v1_and-v2(LE)-feature-table.html</loc>
+    <lastmod>2025-08-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>  
   <!-- 추가 페이지 예시(현재 없으면 제외) -->
   <!--
   <url>
