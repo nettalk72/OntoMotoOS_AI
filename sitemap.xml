@@ -19,6 +19,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://ontomotoos.ai/IAMF_Supplementary_Co.txt</loc>
+    <lastmod>2025-08-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <!-- 추가 페이지 예시(현재 없으면 제외) -->
   <!--
   <url>
