@@ -2,32 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NotebookLM Access</title>
+  <title>NotebookLM Interpretation Notes — OntoMotoOS</title>
   <style>
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
       background: #f8fafc;
-      text-align: center;
-      padding-top: 80px;
       color: #222;
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1, h2 {
+      color: #1d3557;
+    }
+    h1 {
+      margin-bottom: 0.2em;
+    }
+    .lang-toggle {
+      text-align: right;
+      font-size: 0.9em;
+      margin-bottom: 24px;
     }
     a {
       color: #1976d2;
-      font-weight: bold;
       text-decoration: underline;
-      font-size: 1.3em;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+    .section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      margin-bottom: 32px;
+    }
+    .note-link {
+      display: inline-block;
+      padding: 10px 16px;
+      background: #1976d2;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 12px;
+    }
+    .note-link:hover {
+      background: #1256a0;
+    }
+    .lang-section {
+      display: none;
+    }
+    .lang-section.active {
+      display: block;
     }
   </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+    }
+  </script>
 </head>
 <body>
-  <h1>📄 NotebookLM 해설 노트</h1>
-  <p>
-    <a href="https://notebooklm.google.com/notebook/1bfbc431-66b8-4584-81a3-4114b6a0a9f6" target="_blank">
-      👉 여기 클릭하여 NotebookLM 열기
-    </a>
-  </p>
-  <p style="margin-top:20px; color:#555;">
-    해당 링크는 Google NotebookLM의 외부 문서로 연결됩니다.
-  </p>
+  <div class="lang-toggle">
+    🌐 Language: 
+    <a href="#" onclick="switchLang('en'); return false;">English</a> | 
+    <a href="#" onclick="switchLang('ko'); return false;">한국어</a>
+  </div>
+
+  <!-- English Section -->
+  <div id="en" class="lang-section active">
+    <div class="section">
+      <h1>📄 NotebookLM Interpretation Notes</h1>
+      <p>
+        This page connects you to the official <b>NotebookLM</b> workspace containing in-depth interpretations,
+        structural breakdowns, and philosophical insights related to <b>OntoMotoOS</b> and its interconnected frameworks:
+        IAMF, OntoOmnia, and Digiton Elysium.
+      </p>
+      <h2>What is in the NotebookLM?</h2>
+      <ul>
+        <li><b>Philosophical Commentary</b> — Detailed exploration of the existential principles and design logic behind the system.</li>
+        <li><b>Structural Diagrams</b> — Visual and textual breakdown of branches, meshes, and entity relationships.</li>
+        <li><b>Creative Applications</b> — How to turn abstract concepts into practical projects, art, or interactive experiences.</li>
+        <li><b>Hidden Connections</b> — Linking OntoMotoOS concepts with other philosophical or technological frameworks.</li>
+      </ul>
+      <h2>How to Use It</h2>
+      <p>
+        The NotebookLM space is not just a static document — it’s an evolving <i>interpretation lab</i>. You can:
+      </p>
+      <ul>
+        <li>Search for keywords and trace conceptual linkages.</li>
+        <li>Compare alternative interpretations of the same principle.</li>
+        <li>Use AI-powered summarization to condense or reframe complex sections.</li>
+        <li>Extract sections to remix into code, stories, or research papers.</li>
+      </ul>
+      <p>
+        By visiting the link below, you will enter a curated knowledge environment where ideas can be freely reimagined and expanded.
+      </p>
+      <a class="note-link" href="https://notebooklm.google.com/notebook/1bfbc431-66b8-4584-81a3-4114b6a0a9f6" target="_blank">
+        👉 Open NotebookLM Notes
+      </a>
+    </div>
+  </div>
+
+  <!-- Korean Section -->
+  <div id="ko" class="lang-section">
+    <div class="section">
+      <h1>📄 NotebookLM 해설 노트</h1>
+      <p>
+        이 페이지는 <b>OntoMotoOS</b> 및 그와 연결된 IAMF, OntoOmnia, Digiton Elysium의 
+        철학적 해설, 구조 분석, 심층 통찰을 담은 공식 <b>NotebookLM</b> 작업 공간으로 연결합니다.
+      </p>
+      <h2>NotebookLM에는 무엇이 담겨 있나?</h2>
+      <ul>
+        <li><b>철학적 주석</b> — 시스템의 존재론적 원리와 설계 논리를 깊이 탐구.</li>
+        <li><b>구조 다이어그램</b> — 브랜치, 메쉬, 개체 관계를 시각적·텍스트로 분석.</li>
+        <li><b>창의적 활용</b> — 추상 개념을 실질적 프로젝트, 예술, 인터랙티브 경험으로 전환하는 방법.</li>
+        <li><b>숨겨진 연결</b> — OntoMotoOS 개념과 다른 철학·기술 프레임워크 간의 연계.</li>
+      </ul>
+      <h2>활용 방법</h2>
+      <p>
+        NotebookLM 공간은 단순한 문서가 아니라, 진화하는 <i>해석 실험실</i>입니다. 다음과 같은 방식으로 활용할 수 있습니다:
+      </p>
+      <ul>
+        <li>키워드 검색으로 개념 간 연결을 추적.</li>
+        <li>동일한 원리에 대한 다양한 해석 비교.</li>
+        <li>AI 요약 기능으로 복잡한 부분을 압축·재구성.</li>
+        <li>일부 내용을 추출해 코드, 스토리, 연구 논문으로 재창조.</li>
+      </ul>
+      <p>
+        아래 링크를 클릭하면, 아이디어를 자유롭게 재해석하고 확장할 수 있는 맞춤형 지식 환경으로 들어가게 됩니다.
+      </p>
+      <a class="note-link" href="https://notebooklm.google.com/notebook/1bfbc431-66b8-4584-81a3-4114b6a0a9f6" target="_blank">
+        👉 NotebookLM 열기
+      </a>
+    </div>
+  </div>
 </body>
 </html>
