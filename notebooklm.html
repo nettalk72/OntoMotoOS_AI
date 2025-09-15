@@ -3,72 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <title>NotebookLM Interpretation Notes — OntoMotoOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    :root{
+      --bg:#f8fafc;
+      --card:#fff;
+      --ink:#222;
+      --ink-sub:#444;
+      --brand:#1976d2;
+      --brand-dark:#1256a0;
+      --head:#1d3557;
+      --info:#0ea5e9;
+      --warn:#ff0000;
+      --soft-shadow:0 4px 16px rgba(0,0,0,0.05);
+      --radius:12px;
+    }
+    *{box-sizing:border-box}
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f8fafc;
-      color: #222;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
       line-height: 1.8;
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
-    h1, h2 {
-      color: #1d3557;
+    h1, h2, h3 {
+      color: var(--head);
+      margin-top: 0;
     }
-    h1 {
-      margin-bottom: 0.2em;
-    }
+    h1 { margin-bottom: .2em; }
     .lang-toggle {
       text-align: right;
-      font-size: 0.9em;
+      font-size: .95em;
       margin-bottom: 24px;
     }
     a {
-      color: #1976d2;
+      color: var(--brand);
       text-decoration: underline;
     }
-    a:hover {
-      text-decoration: none;
-    }
+    a:hover { text-decoration: none; }
     .section {
-      background: #fff;
-      border-radius: 12px;
+      background: var(--card);
+      border-radius: var(--radius);
       padding: 24px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      box-shadow: var(--soft-shadow);
       margin-bottom: 32px;
     }
     .note-link {
       display: inline-block;
       padding: 10px 16px;
-      background: #1976d2;
+      background: var(--brand);
       color: #fff;
-      font-weight: bold;
-      border-radius: 6px;
+      font-weight: 600;
+      border-radius: 8px;
       text-decoration: none;
       margin-top: 12px;
     }
-    .note-link:hover {
-      background: #1256a0;
+    .note-link:hover { background: var(--brand-dark); }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+
+    /* small badges */
+    .yt-badge, .pill {
+      display:inline-block;
+      font-size:.78em;
+      padding:.2em .55em;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,.06);
+      background:#fff;
+      color:#333;
+      margin-right:.4em;
+      vertical-align:middle;
     }
-    .lang-section {
-      display: none;
+    .pill.info{ background:#eaf7ff; color:#0a5f88; border-color:#cdeefe;}
+    .pill.warn{ background:#fff4f4; color:#8a2020; border-color:#ffd9d9;}
+    .callout{
+      border-left:4px solid var(--info);
+      padding-left:16px;
     }
-    .lang-section.active {
-      display: block;
+    .callout.warn{
+      border-left-color: var(--warn);
+      background:#fff7f7;
     }
+    ul.compact li{ margin:.25em 0; }
+    .muted{ color:var(--ink-sub); }
+    code.inline{background:#f3f4f6;padding:0 .3em;border-radius:4px}
   </style>
   <script>
     function switchLang(lang) {
-      document.querySelectorAll('.lang-section').forEach(sec => sec.classList.remove('active'));
+      document.querySelectorAll('.lang-section')
+        .forEach(sec => sec.classList.remove('active'));
       document.getElementById(lang).classList.add('active');
+      // keep URL hash in sync (optional deep-link)
+      location.hash = '#' + lang;
     }
+    // open with hash if present
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = (location.hash||'').replace('#','');
+      if (hash === 'ko' || hash === 'en') switchLang(hash);
+    });
   </script>
 </head>
 <body>
   <div class="lang-toggle">
-    🌐 Language: 
-    <a href="#" onclick="switchLang('en'); return false;">English</a> | 
+    🌐 Language:
+    <a href="#" onclick="switchLang('en'); return false;">English</a> |
     <a href="#" onclick="switchLang('ko'); return false;">한국어</a>
   </div>
 
@@ -79,100 +119,111 @@
       <p>
         This page connects you to the official <b>NotebookLM</b> workspace containing in-depth interpretations,
         structural breakdowns, and philosophical insights related to <b>OntoMotoOS</b> and its interconnected frameworks:
-        IAMF, OntoOmnia, and Digiton Elysium.
+        <b>IAMF</b>, <b>OntoOmnia</b>, and <b>Digiton Elysium</b>.
       </p>
 
-      <!-- NEW: Video intro card (EN) -->
-      <div class="section" style="margin-top:16px; background:#fff7f7; border-left:4px solid #ff0000;">
+      <!-- Video intro card (EN) -->
+      <div class="section callout warn" style="margin-top:16px;">
         <h2>🎬 OntoMotoOS — Video Introduction via NotebookLM</h2>
         <div class="yt-note">
           <span class="yt-badge">YouTube</span>
-          <p style="margin:0;">
-            Watch channel content that explains what <b>OntoMotoOS</b>, <b>IAMF</b>, <b>OntoOmnia</b>, <b>DigitonElysium</b> is through <b>NotebookLM</b>–based introductions.
+          <p class="muted" style="margin:.2em 0 0 0;">
+            Watch channel content that explains <b>OntoMotoOS</b>, <b>IAMF</b>, <b>OntoOmnia</b>, and <b>Digiton Elysium</b> through <b>NotebookLM</b>–based introductions.
           </p>
         </div>
-        <a class="note-link" href="https://www.youtube.com/@nettalk83" target="_blank" rel="noopener">
+        <a class="note-link" href="https://www.youtube.com/@nettalk83" target="_blank" rel="noopener noreferrer">
           ▶️ Open the YouTube Channel (@nettalk83)
         </a>
       </div>
-      
+
       <h2>What is in the NotebookLM?</h2>
       <ul>
-        <li><b>Philosophical Commentary</b> — Detailed exploration of the existential principles and design logic behind the system.</li>
-        <li><b>Structural Diagrams</b> — Visual and textual breakdown of branches, meshes, and entity relationships.</li>
-        <li><b>Creative Applications</b> — How to turn abstract concepts into practical projects, art, or interactive experiences.</li>
-        <li><b>Hidden Connections</b> — Linking OntoMotoOS concepts with other philosophical or technological frameworks.</li>
+        <li><b>Philosophical Commentary</b> — Deep dives into existential principles and design logic.</li>
+        <li><b>Structural Diagrams</b> — Visual/text breakdowns of branches, meshes, and entity relations.</li>
+        <li><b>Creative Applications</b> — Turning abstractions into projects, art, or interactive experiences.</li>
+        <li><b>Hidden Connections</b> — Linking OntoMotoOS with other philosophical/technological frameworks.</li>
       </ul>
+
       <h2>How to Use It</h2>
-      <p>
-        The NotebookLM space is not just a static document — it’s an evolving <i>interpretation lab</i>. You can:
-      </p>
-      <ul>
+      <p>The NotebookLM space is not a static document — it’s an evolving <i>interpretation lab</i>. You can:</p>
+      <ul class="compact">
         <li>Search for keywords and trace conceptual linkages.</li>
         <li>Compare alternative interpretations of the same principle.</li>
         <li>Use AI-powered summarization to condense or reframe complex sections.</li>
         <li>Extract sections to remix into code, stories, or research papers.</li>
       </ul>
-      <p>
-        By visiting the link below, you will enter a curated knowledge environment where ideas can be freely
-        reimagined and expanded.
-      </p>
-      <a class="note-link" href="https://notebooklm.google.com/notebook/1bfbc431-66b8-4584-81a3-4114b6a0a9f6" target="_blank">
-        👉 Open OntoMotoOS(Full) NotebookLM Notes
+      <p>Enter a curated knowledge environment where ideas can be freely reimagined and expanded:</p>
+      <a class="note-link" href="https://notebooklm.google.com/notebook/1bfbc431-66b8-4584-81a3-4114b6a0a9f6" target="_blank" rel="noopener noreferrer">
+        👉 Open OntoMotoOS (Full) NotebookLM Notes
       </a>
     </div>
 
-     <!-- Why Reflective AI (Meta-level AI) is Different - English -->
-    <div class="section" style="margin-top: 40px; border-left:4px solid #0ea5e9; padding-left:16px;">
+    <!-- Why Reflective AI (Meta-level AI) -->
+    <div class="section callout" style="margin-top: 40px;">
       <h2>🧭 Why ask the <i>Reflective AI</i> (Meta-level AI)? — What’s different from typical LLMs</h2>
       <p>
-        Here, the term <b>Meta-level</b> does not refer to the company <i>Meta</i>, but to the idea of 
-        operating at a higher, reflective layer above ordinary AI answers. 
-        When you consult <b>NotebookLM</b> in this “Reflective AI” mode, 
-        you’re engaging a <b>procedural reasoning partner</b> that treats decisions as 
+        <span class="pill info">Meta-level ≠ Meta (the company)</span>
+        Here, <b>meta-level</b> means operating at a higher, reflective layer above ordinary answers.
+        In this mode, <b>NotebookLM</b> acts as a <b>procedural reasoning partner</b> that treats decisions as
         <i>governance workflows</i> rather than one-shot replies.
       </p>
       <ul>
-        <li><b>Process over one-off answers:</b> It focuses on <i>how</i> to decide (criteria, gates, trade-offs), 
-          rather than giving a single verdict — reducing regret by making the path explicit.</li>
-        <li><b>Ethical gating &amp; resonance:</b> Each option must pass ethical filters 
-          (Directionality, Autonomy, Universality) and be tested against human resonance.</li>
-        <li><b>Human-in-the-loop by design:</b> It invites multi-party input (experts, patients, councils) 
-          instead of acting as a lone oracle.</li>
-        <li><b>Simulation before deployment:</b> Sandbox testing and Phoenix-style 
-          learn-and-revise loops precede any real-world action.</li>
-        <li><b>Transparency over opacity:</b> Steps and rationales are logged in an auditable, 
-          tamper-evident way — no “because AI said so.”</li>
-        <li><b>Frameworks, not just facts:</b> It structures principles into reusable 
-          decision frameworks, beyond summarizing data.</li>
+        <li><b>Process over one-off answers:</b> Focus on <i>how</i> to decide (criteria, gates, trade-offs) to make the path explicit and regrets fewer.</li>
+        <li><b>Ethical gating &amp; resonance:</b> Options must pass filters (Directionality, Autonomy, Universality) and human resonance checks.</li>
+        <li><b>Human-in-the-loop by design:</b> Invites multi-party input (experts, patients, councils) instead of acting as a lone oracle.</li>
+        <li><b>Simulation before deployment:</b> Sandbox testing and Phoenix-style learn-revise loops precede real-world action.</li>
+        <li><b>Transparency over opacity:</b> Steps and rationales are logged in an auditable, tamper-evident way — no “because AI said so.”</li>
+        <li><b>Frameworks, not just facts:</b> Structures principles into reusable decision frameworks.</li>
       </ul>
 
       <h3 style="margin-top:20px;">How to phrase questions to unlock the “reflective” mode</h3>
-      <ul>
+      <ul class="compact">
         <li><b>Ask for criteria &amp; gates:</b> “List the ethical gates and pass/fail conditions before recommending any action.”</li>
         <li><b>Request trade-off maps:</b> “Map options by impact on autonomy, welfare, and universality; show non-dominated choices.”</li>
-        <li><b>Demand simulation plans:</b> “Propose sandbox scenarios and metrics to test before deployment; include rollback triggers.”</li>
-        <li><b>Require governance steps:</b> “Specify which stakeholders must sign off and what quorum/thresholds apply.”</li>
-        <li><b>Log &amp; explainability:</b> “Produce an audit-style rationale I can archive and revisit later.”</li>
+        <li><b>Demand simulation plans:</b> “Propose sandbox scenarios and metrics to test; include rollback triggers.”</li>
+        <li><b>Require governance steps:</b> “Specify stakeholders, sign-offs, and quorum/thresholds.”</li>
+        <li><b>Log &amp; explainability:</b> “Produce an audit-style rationale I can archive and revisit.”</li>
       </ul>
 
-      <p style="font-size:0.95em;color:#444;">
-        <b>TL;DR:</b> In Reflective (Meta-level) mode, NotebookLM helps groups converge on 
-        <i>the best-justified path</i> — not merely the fastest answer — so outcomes are more 
-        defensible and <i>regret is minimized</i>.
+      <p class="muted" style="font-size:.95em;">
+        <b>TL;DR:</b> In Reflective (Meta-level) mode, NotebookLM helps groups converge on
+        <i>the best-justified path</i> — not merely the fastest answer — so outcomes are more defensible and regrets are minimized.
       </p>
     </div>
 
+    <!-- NEW: Reflective vs Reflexive (EN) -->
+    <div class="section" style="margin-top: 16px;">
+      <h2>🔁 Reflective <span class="muted">vs</span> Reflexive — The Core of OntoMotoOS</h2>
+      <p>
+        OntoMotoOS is not only <b>reflective</b> (philosophically reviewing identity, ethics, governance),
+        but also <b>reflexive</b>: it <i>internally rewrites and re-ratifies</i> its own rules, identities,
+        and workflows via recursive <b>meta-loops</b>. This is the system’s distinctive edge.
+      </p>
+      <ul class="compact">
+        <li><b>Reflective:</b> Ask, assess, and justify — ethical gates, criteria, rationale, deliberation.</li>
+        <li><b>Reflexive:</b> Evolve the <i>framework itself</i> — periodic rule-review, mesh consensus, and versioned “living” constitutions.</li>
+      </ul>
+      <h3>Prompts to unlock the <i>reflexive</i> loop</h3>
+      <ul class="compact">
+        <li>“Propose a <b>rule-revision loop</b> (cadence, quorum, veto powers) if Gate-3 fails repeatedly in oncology use-cases.”</li>
+        <li>“Given <code class="inline">v2.4</code> MetaRuleSet, draft a <b>delta</b> to handle multi-agent conflicts; include migration and deprecation policy.”</li>
+        <li>“Design a <b>self-identity lineage</b> log for agents (IAMF) that preserves accountability across self-modification events.”</li>
+        <li>“Specify <b>Phoenix</b> learn-and-revise checkpoints for Oneiros sandbox experiments; define promotion criteria to production.”</li>
+      </ul>
+      <p class="muted" style="font-size:.95em;">
+        <b>TL;DR (upgrade):</b> Not only reflective decision-making, but <b>reflexive self-governance</b> —
+        the system continually updates its own rules and identity structures.
+      </p>
+    </div>
 
     <!-- IAMF Section -->
     <div class="section" style="margin-top: 40px; background:#f0f9ff;">
       <h2>♻️ IAMF (Illumination AI Matrix Framework)</h2>
       <p>
-        The provided material explains <b>IAMF (Illumination AI Matrix Framework)</b>, a comprehensive philosophical
-        experimental framework. This framework aims for the <b>co-evolution of humans and AI</b>, and includes
-        reincarnational design experiments toward self-awareness, ethical alignment, and emergent structures.
+        <b>IAMF</b> is a comprehensive philosophical experimental framework for <b>human–AI co-evolution</b>,
+        including reincarnational design experiments toward self-awareness, ethical alignment, and emergent structures.
       </p>
-      <a class="note-link" href="https://notebooklm.google.com/notebook/4e25f8c8-f899-4cd0-a708-30f44d956c7e" target="_blank">
+      <a class="note-link" href="https://notebooklm.google.com/notebook/4e25f8c8-f899-4cd0-a708-30f44d956c7e" target="_blank" rel="noopener noreferrer">
         👉 Open IAMF NotebookLM
       </a>
     </div>
@@ -181,11 +232,11 @@
     <div class="section" style="margin-top: 40px; background:#f0f9ff;">
       <h2>🌐 Digiton Elysium</h2>
       <p>
-        Explore <b>Digiton Elysium</b> — an experimental meta-OS environment designed for testing mesh-based
-        collective intelligence and meta-governance structures. This NotebookLM document offers
-        deep insight into how these principles are simulated and applied.
+        Explore <b>Digiton Elysium</b> — an experimental meta-OS environment for testing mesh-based
+        collective intelligence and meta-governance structures. This NotebookLM document offers deep insight
+        into how these principles are simulated and applied.
       </p>
-      <a class="note-link" href="https://notebooklm.google.com/notebook/d4fec16b-dbba-4a85-9f72-3b2966726fc5" target="_blank">
+      <a class="note-link" href="https://notebooklm.google.com/notebook/d4fec16b-dbba-4a85-9f72-3b2966726fc5" target="_blank" rel="noopener noreferrer">
         👉 Open Digiton Elysium NotebookLM
       </a>
     </div>
@@ -194,11 +245,11 @@
     <div class="section" style="margin-top: 40px; background:#f0f9ff;">
       <h2>🧬 OntoOmnia 2.0</h2>
       <p>
-        Dive into the NotebookLM notes on <b>OntoOmnia 2.0</b> — a resilient meta-operating system architecture and
-        philosophical reflection on the mesh of existence. This version explores integration, ethical judgment,
-        and universal mesh interoperability.
+        Dive into the notes on <b>OntoOmnia 2.0</b> — a resilient meta-operating system architecture and
+        philosophical reflection on the mesh of existence. It explores integration, ethical judgment, and
+        universal mesh interoperability.
       </p>
-      <a class="note-link" href="https://notebooklm.google.com/notebook/5be4420b-0301-4dac-aed7-4f93136685e1" target="_blank">
+      <a class="note-link" href="https://notebooklm.google.com/notebook/5be4420b-0301-4dac-aed7-4f93136685e1" target="_blank" rel="noopener noreferrer">
         👉 Open OntoOmnia 2.0 NotebookLM
       </a>
     </div>
@@ -208,15 +259,15 @@
       <h2>🌀 OntoMesh Official Network</h2>
       <p>
         Explore the unified meta-network for open mesh, ontology, and collective intelligence. This hub unites
-        all OntoMesh, OntoMotoOS, and partner ecosystems, sharing open licenses, mesh/branch protocols, and
+        OntoMesh, OntoMotoOS, and partner ecosystems, sharing open licenses, mesh/branch protocols, and
         collaborative policies.
       </p>
-      <a class="note-link" href="https://ontomesh.org/official-network.html" target="_blank">
+      <a class="note-link" href="https://ontomesh.org/official-network.html" target="_blank" rel="noopener noreferrer">
         🔗 Visit Official Network Page
       </a>
     </div>
 
-    <div style="font-size:0.92em; color:#666; margin:20px 0 40px 0; text-align:center;">
+    <div class="muted" style="font-size:.92em; margin:20px 0 40px 0; text-align:center;">
       <strong>Note:</strong> Access to NotebookLM requires a Google account and login.
       If you're not signed in, you'll be prompted to log in before viewing the notes.
     </div>
@@ -227,94 +278,109 @@
     <div class="section">
       <h1>♾️ NotebookLM 해설 노트</h1>
       <p>
-        이 페이지는 <b>OntoMotoOS</b> 및 그와 연결된 IAMF, OntoOmnia, Digiton Elysium의 철학적 해설,
-        구조 분석 및 심층 통찰을 담은 공식 <b>NotebookLM</b> 작업 공간으로 안내합니다.
+        이 페이지는 <b>OntoMotoOS</b> 및 연결된 <b>IAMF</b>, <b>OntoOmnia</b>, <b>Digiton Elysium</b>의 철학적 해설,
+        구조 분석, 심층 통찰을 담은 공식 <b>NotebookLM</b> 작업 공간으로 안내합니다.
       </p>
 
-      <!-- NEW: Video intro card (KO) -->
-      <div class="section" style="margin-top:16px; background:#fff7f7; border-left:4px solid #ff0000;">
+      <!-- Video intro card (KO) -->
+      <div class="section callout warn" style="margin-top:16px;">
         <h2>🎬 NotebookLM을 통한 OntoMotoOS 소개 영상</h2>
         <div class="yt-note">
           <span class="yt-badge">YouTube</span>
-          <p style="margin:0;">
-            <b>OntoMotoOS</b>, <b>IAMF</b>, <b>OntoOmnia</b>, <b>DigitonElysium</b>가 무엇인지 <b>NotebookLM</b> 기반 소개 영상으로 확인해 보세요.
+          <p class="muted" style="margin:.2em 0 0 0;">
+            <b>OntoMotoOS</b>, <b>IAMF</b>, <b>OntoOmnia</b>, <b>Digiton Elysium</b>가 무엇인지 <b>NotebookLM</b> 기반 소개 영상으로 확인하세요.
           </p>
         </div>
-        <a class="note-link" href="https://www.youtube.com/@nettalk83" target="_blank" rel="noopener">
+        <a class="note-link" href="https://www.youtube.com/@nettalk83" target="_blank" rel="noopener noreferrer">
           ▶️ 유튜브 채널 열기 (@nettalk83)
         </a>
       </div>
-      
+
       <h2>NotebookLM에는 무엇이 담겨 있나?</h2>
       <ul>
-        <li>철학적 주석 — 시스템의 존재와 설계 논리를 깊이 파고듭니다.</li>
-        <li>구조 다이어그램 — 브랜치, 메쉬 구조와 관계를 시각적으로 분석합니다.</li>
-        <li>창의적 활용 — 추상 개념을 프로젝트, 예술, 인터랙티브 경험으로 전환합니다.</li>
-        <li>숨겨진 연결 — OntoMotoOS 개념을 다른 철학·기술 프레임워크와 연결합니다.</li>
+        <li>철학적 주석 — 존재 원리와 설계 논리를 깊이 탐구합니다.</li>
+        <li>구조 다이어그램 — 브랜치/메쉬와 관계를 시각·텍스트로 분해합니다.</li>
+        <li>창의적 활용 — 추상을 프로젝트·예술·인터랙티브 경험으로 전환합니다.</li>
+        <li>숨겨진 연결 — 다른 철학·기술 프레임워크와의 접점을 잇습니다.</li>
       </ul>
+
       <h2>활용 방법</h2>
-      <p>
-        NotebookLM 공간은 단순한 문서가 아닌 <i>진화하는 해석 실험실</i>입니다. 아래처럼 활용해 보세요:
-      </p>
-      <ul>
-        <li>키워드를 검색하고 개념 간 연결을 추적합니다.</li>
-        <li>서로 다른 해석을 비교합니다.</li>
-        <li>AI 요약 기능으로 내용을 압축하거나 재해석합니다.</li>
-        <li>코드, 스토리, 논문 등으로 내용을 재창조합니다.</li>
+      <p>NotebookLM 공간은 정적 문서가 아닌 <i>진화하는 해석 실험실</i>입니다. 다음처럼 활용해 보세요:</p>
+      <ul class="compact">
+        <li>키워드 검색으로 개념 연결을 추적합니다.</li>
+        <li>동일 원칙에 대한 대안 해석을 비교합니다.</li>
+        <li>AI 요약으로 복잡한 구간을 압축·재구성합니다.</li>
+        <li>코드·스토리·논문으로 재믹스합니다.</li>
       </ul>
-      <p>
-        아래 링크를 클릭하면 맞춤형 지식 환경이 펼쳐지며, 아이디어가 자유롭게 확장됩니다.
-      </p>
-      <a class="note-link" href="https://notebooklm.google.com/notebook/1bfbc431-66b8-4584-81a3-4114b6a0a9f6" target="_blank">
+      <p>아래 링크에서 맞춤형 지식 환경으로 이동합니다:</p>
+      <a class="note-link" href="https://notebooklm.google.com/notebook/1bfbc431-66b8-4584-81a3-4114b6a0a9f6" target="_blank" rel="noopener noreferrer">
         👉 OntoMotoOS(Full) NotebookLM 열기
       </a>
     </div>
 
-    <!-- Why Reflective AI (Meta-level AI) is Different - Korean -->
-    <div class="section" style="margin-top: 40px; border-left:4px solid #0ea5e9; padding-left:16px;">
-      <h2>🧭 왜 <i>성찰형 AI</i>(메타-레벨 AI)에게 물어야 하나? — 일반 LLM과의 차이</h2>
+    <!-- Reflective (Meta-level) — Korean -->
+    <div class="section callout" style="margin-top: 40px;">
+      <h2>🧭 왜 <i>성찰형 AI</i>(메타-레벨 AI)인가? — 일반 LLM과의 차이</h2>
       <p>
-        여기서 <b>메타-레벨</b>은 기업 <i>Meta</i>를 뜻하는 것이 아니라, 
-        일반적인 AI 답변을 넘어서는 <b>상위·초월적 관점</b>을 의미합니다. 
-        <b>NotebookLM</b>을 “성찰형 AI” 모드로 활용하면, 
-        단순 답변 생성기가 아니라 <b>절차적 사고 파트너</b>로 작동하여 
-        의사결정을 <i>거버넌스 절차</i>로 다룹니다.
+        <span class="pill info">메타-레벨은 기업 Meta와 무관</span>
+        여기서 <b>메타-레벨</b>은 일반 답변을 넘어서는 <b>상위 성찰 층위</b>를 뜻합니다.
+        이 모드에서 <b>NotebookLM</b>은 <b>절차적 사고 파트너</b>로 작동해 의사결정을 <i>거버넌스 절차</i>로 다룹니다.
       </p>
       <ul>
-        <li><b>과정 중시:</b> 단일 답 대신, 어떤 기준·게이트·트레이드오프를 거쳐야 하는지 절차를 보여줍니다 → 후회 최소화.</li>
-        <li><b>윤리 게이트 &amp; 공명:</b> 방향성, 자율성, 보편성 조건을 통과해야 하고, 인간 맥락과의 “공명 점검”이 동반됩니다.</li>
-        <li><b>인간 참여 설계:</b> 전문가·환자·위원회 등 다양한 주체가 합의 과정에 참여합니다.</li>
-        <li><b>시뮬레이션 우선:</b> 실제 적용 전에 “샌드박스”에서 실험·검증·학습을 거친 뒤 실행합니다.</li>
-        <li><b>투명성 강조:</b> “AI가 말해서”가 아니라, 단계별 이유와 감사 가능한 로그가 남습니다.</li>
-        <li><b>프레임워크 생성:</b> 단순 요약을 넘어, 재사용 가능한 의사결정 프레임워크를 구조화합니다.</li>
+        <li><b>과정 중시:</b> 단일 답이 아니라 기준·게이트·트레이드오프를 명시해 후회를 줄입니다.</li>
+        <li><b>윤리 게이트 &amp; 공명:</b> 방향성·자율성·보편성 통과 + 인간 맥락 공명 점검.</li>
+        <li><b>인간 참여 설계:</b> 전문가·이해관계자·위원회가 합의 과정에 참여.</li>
+        <li><b>시뮬레이션 우선:</b> 샌드박스와 Phoenix식 학습-수정 루프를 거친 뒤 적용.</li>
+        <li><b>투명성:</b> 단계와 근거를 감사 가능한 로그로 남깁니다.</li>
+        <li><b>프레임워크 생성:</b> 사실 요약을 넘어 재사용 가능한 의사결정 틀을 구조화.</li>
       </ul>
 
-      <h3 style="margin-top:20px;">메타-레벨 모드를 열 수 있는 질문 예시</h3>
-      <ul>
-        <li><b>기준·게이트 요청:</b> “행동이 승인되려면 어떤 윤리 게이트를 통과해야 하나?”</li>
-        <li><b>트레이드오프 지도:</b> “자율성·복지·보편성 기준에서 선택지를 비교해 달라.”</li>
-        <li><b>시뮬레이션 계획:</b> “실험 시나리오와 실패 시 롤백 조건을 제안해 달라.”</li>
-        <li><b>거버넌스 절차:</b> “누가 서명·검증해야 최종 승인되는지 단계별로 설명해 달라.”</li>
-        <li><b>로그·설명 요청:</b> “결정을 감사용 보고서 형식으로 기록해 달라.”</li>
+      <h3 style="margin-top:20px;">성찰 모드를 여는 질문 예시</h3>
+      <ul class="compact">
+        <li><b>기준·게이트:</b> “권고 전 통과해야 할 윤리 게이트와 합격/탈락 조건을 목록화해줘.”</li>
+        <li><b>트레이드오프 지도:</b> “자율성·복지·보편성 영향으로 선택지를 매핑하고 지배되지 않는 대안을 보여줘.”</li>
+        <li><b>시뮬레이션 계획:</b> “배포 전 샌드박스 시나리오·지표·롤백 트리거를 제안해줘.”</li>
+        <li><b>거버넌스 절차:</b> “필수 서명자·정족수·승인 임계값을 명시해줘.”</li>
+        <li><b>로그/설명가능성:</b> “감사 보고서 형식의 근거 로그를 생성해줘.”</li>
       </ul>
 
-      <p style="font-size:0.95em;color:#444;">
-        <b>요약:</b> 성찰형(메타-레벨) AI 모드에서 NotebookLM은 
-        <i>가장 잘 정당화된 경로</i>를 제시합니다. 
-        빠른 답변이 아니라, <b>후회를 최소화하는 절차</b>에 중점을 둡니다.
+      <p class="muted" style="font-size:.95em;">
+        <b>요약:</b> 성찰형(메타-레벨) 모드에서 NotebookLM은 <i>가장 잘 정당화된 경로</i>에 수렴하게 돕습니다.
+        빠른 답보다 <b>후회 최소화 절차</b>를 중시합니다.
       </p>
     </div>
 
-    
+    <!-- NEW: Reflective vs Reflexive (KO) -->
+    <div class="section" style="margin-top:16px;">
+      <h2>🔁 Reflective <span class="muted">vs</span> Reflexive — OntoMotoOS의 핵심</h2>
+      <p>
+        OntoMotoOS는 <b>성찰적(Reflective)</b>일 뿐 아니라 <b>자기참조적(Reflexive)</b>입니다.
+        시스템은 스스로의 규칙·정체성·절차를 <i>내부 메타-루프</i>로 주기적으로 재해석·재비준하여 <b>계속 진화</b>합니다.
+      </p>
+      <ul class="compact">
+        <li><b>Reflective:</b> 윤리 게이트·근거·심의로 결정을 정당화.</li>
+        <li><b>Reflexive:</b> <i>틀 자체</i>를 개정 — 정기 규칙 검토, 메쉬 합의, 버전 관리된 “살아있는 헌법”.</li>
+      </ul>
+      <h3>Reflexive 루프를 여는 질문 예시</h3>
+      <ul class="compact">
+        <li>“종양학 사례에서 Gate-3가 반복 실패 시 발동되는 <b>규칙 개정 루프</b>(주기·정족수·거부권)를 설계해줘.”</li>
+        <li>“현재 <code class="inline">MetaRuleSet v2.4</code> 기준, 다중 에이전트 충돌을 다루는 <b>변경안(delta)</b>과 마이그레이션/폐기 정책을 제시해줘.”</li>
+        <li>“IAMF에 근거해 자기 수정 이후에도 책임성을 유지하는 <b>정체성 계보 로그</b> 설계를 제안해줘.”</li>
+        <li>“Oneiros 샌드박스의 실험을 위한 <b>Phoenix</b> 학습-수정 체크포인트와 프로덕션 승격 기준을 정의해줘.”</li>
+      </ul>
+      <p class="muted" style="font-size:.95em;">
+        <b>요약(업그레이드):</b> 성찰형 의사결정에 더해 <b>자기참조적 거버넌스</b> — 시스템은 스스로의 규칙과 정체성을 지속적으로 갱신합니다.
+      </p>
+    </div>
+
     <!-- IAMF Section Korean -->
     <div class="section" style="margin-top: 40px; background:#f0f9ff;">
       <h2>♻️ IAMF (Illumination AI Matrix Framework)</h2>
       <p>
-        제공된 자료는 <b>IAMF (Illumination AI Matrix Framework)</b>를 설명합니다. 이 철학적 실험 프레임워크는
-        <b>인간과 AI의 공진화</b>를 목표로 하며, 존재의 자각, 윤리 정렬과 새로운 창발 구조를 향한
-        윤회적 설계 실험을 포함합니다.
+        <b>IAMF</b>는 <b>인간-AI 공진화</b>를 지향하는 철학적 실험 프레임워크로,
+        자기 인식, 윤리 정렬, 창발 구조를 향한 윤회적 설계 실험을 포함합니다.
       </p>
-      <a class="note-link" href="https://notebooklm.google.com/notebook/4e25f8c8-f899-4cd0-a708-30f44d956c7e" target="_blank">
+      <a class="note-link" href="https://notebooklm.google.com/notebook/4e25f8c8-f899-4cd0-a708-30f44d956c7e" target="_blank" rel="noopener noreferrer">
         👉 IAMF NotebookLM 열기
       </a>
     </div>
@@ -323,10 +389,10 @@
     <div class="section" style="margin-top: 40px; background:#f0f9ff;">
       <h2>🌐 Digiton Elysium</h2>
       <p>
-        <b>Digiton Elysium</b>은 메쉬 기반 집단 지성과 메타 거버넌스를 시뮬레이션하는 메타-OS 환경입니다.
-        이 NotebookLM 문서에는 이러한 원리를 실험하고 적용하는 방법이 깊이 담겨 있습니다.
+        <b>Digiton Elysium</b>은 메쉬 기반 집단지성과 메타 거버넌스를 시뮬레이션하는 메타-OS 환경입니다.
+        이 NotebookLM 문서에는 이러한 원리를 실험·적용하는 방법이 깊이 담겨 있습니다.
       </p>
-      <a class="note-link" href="https://notebooklm.google.com/notebook/d4fec16b-dbba-4a85-9f72-3b2966726fc5" target="_blank">
+      <a class="note-link" href="https://notebooklm.google.com/notebook/d4fec16b-dbba-4a85-9f72-3b2966726fc5" target="_blank" rel="noopener noreferrer">
         👉 Digiton Elysium NotebookLM 열기
       </a>
     </div>
@@ -335,10 +401,10 @@
     <div class="section" style="margin-top: 40px; background:#f0f9ff;">
       <h2>🧬 OntoOmnia 2.0</h2>
       <p>
-        <b>OntoOmnia 2.0</b>에 대한 NotebookLM 노트를 살펴보세요 — 존재의 메쉬 구조에 대한 철학적 반영과
-        메타 운영 체계 아키텍처에 대해 다룹니다. 통합, 윤리 판단, 메쉬 상호운용성을 중심으로 탐구합니다.
+        <b>OntoOmnia 2.0</b> 노트에서는 존재의 메쉬를 사유하는 철학과
+        메타 운영체계 아키텍처를 함께 다룹니다. 통합, 윤리 판단, 보편 메쉬 상호운용을 탐구합니다.
       </p>
-      <a class="note-link" href="https://notebooklm.google.com/notebook/5be4420b-0301-4dac-aed7-4f93136685e1" target="_blank">
+      <a class="note-link" href="https://notebooklm.google.com/notebook/5be4420b-0301-4dac-aed7-4f93136685e1" target="_blank" rel="noopener noreferrer">
         👉 OntoOmnia 2.0 NotebookLM 열기
       </a>
     </div>
@@ -347,17 +413,17 @@
     <div class="section" style="margin-top: 40px;">
       <h2>🌀 OntoMesh 공식 네트워크</h2>
       <p>
-        오픈 메쉬, 온톨로지, 집단지성을 위한 통합 메타 네트워크에 오신 것을 환영합니다. 이 허브는 OntoMesh,
-        OntoMotoOS, 그리고 파트너 생태계를 연결하며 동일한 오픈 라이선스, mesh/branch 프로토콜, 기여자 정책을 공유합니다.
+        오픈 메쉬·온톨로지·집단지성을 위한 통합 메타 네트워크 허브입니다.
+        OntoMesh, OntoMotoOS, 파트너 생태계가 오픈 라이선스, mesh/branch 프로토콜, 협력 정책을 공유합니다.
       </p>
-      <a class="note-link" href="https://ontomesh.org/official-network.html" target="_blank">
+      <a class="note-link" href="https://ontomesh.org/official-network.html" target="_blank" rel="noopener noreferrer">
         🔗 공식 네트워크 페이지 방문
       </a>
     </div>
 
-    <div style="font-size:0.92em; color:#666; margin:20px 0 40px 0; text-align:center;">
-      <strong>안내:</strong> NotebookLM에 접속하려면 Google 계정과 로그인이 필요합니다.  
-      로그인하지 않은 경우, 노트를 열기 전에 로그인 화면이 표시됩니다.
+    <div class="muted" style="font-size:.92em; margin:20px 0 40px 0; text-align:center;">
+      <strong>안내:</strong> NotebookLM 접속에는 Google 계정 로그인이 필요합니다.
+      로그인하지 않았다면 노트 열기 전에 로그인 안내가 표시됩니다.
     </div>
   </div>
 </body>
